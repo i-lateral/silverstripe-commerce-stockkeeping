@@ -1,0 +1,10 @@
+---
+Name: CommerceStockKeeping
+After: 'commerce/*'
+---
+CatalogueProduct:
+  extensions:
+    - StockKeepingCatalogueProductExtension
+Order:
+  extensions:
+    - StockKeepingOrderExtension
