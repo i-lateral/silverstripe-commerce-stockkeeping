@@ -1,0 +1,24 @@
+{
+  "name": "i-lateral/silverstripe-commerce-stockkeeping",
+  "description": "A Silverstripe module that adds stock levels to products and allows these to be reduced when the order reaches a specified status",
+  "type": "silverstripe-module",
+    "homepage": "http://github.com/i-lateral/silverstripe-commerce-stockkeeping",
+    "keywords": ["silverstripe","commerce","stock","level","stockkeeping"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "i-lateral",
+            "email": "info@i-lateral.com"
+        }
+    ],
+    "support": {
+        "issues": "http://github.com/i-lateral/silverstripe-commerce-stockkeeping/issues"
+    },
+    "require": {
+        "silverstripe/framework": ">=3.1",
+        "i-lateral/silverstripe-commerce": "2.0.*@dev"
+    },
+    "extra": {
+        "installer-name": "commerce-stockkeeping"
+    }
+}
