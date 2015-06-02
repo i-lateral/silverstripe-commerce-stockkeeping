@@ -8,3 +8,6 @@ CatalogueProduct:
 Order:
   extensions:
     - StockKeepingOrderExtension
+ShoppingCart:
+  extensions:
+    - StockKeepingShoppingCartExtension

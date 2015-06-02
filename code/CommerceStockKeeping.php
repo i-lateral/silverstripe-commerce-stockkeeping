@@ -15,12 +15,20 @@ class CommerceStockKeeping extends ViewableData {
     private static $completion_status = "paid"; 
     
     /**
-     * Should be track stock levels into the negative, if this is
+     * Should we track stock levels into the negative, if this is
      * turned off, all product stock gets set to 0.
      * 
      * @var boolean
      * @config
      */
     private static $allow_negative = true;
+    
+    /**
+     * Allow users to add items to cart if there is not enough stock? 
+     * 
+     * @var boolean
+     * @config
+     */
+    private static $allow_adding = false;
     
 }
