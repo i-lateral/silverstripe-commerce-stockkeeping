@@ -1,1 +1,3 @@
-en: {  }
+en:
+  StockKeeping:
+    NotEnoughStock: 'There are not enough ''{title}'' in stock'
