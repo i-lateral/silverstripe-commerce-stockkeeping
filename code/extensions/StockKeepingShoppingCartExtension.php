@@ -7,15 +7,17 @@
  * 
  * @author Morven Lewis-Everley
  */
-class StockKeepingShoppingCartExtension extends Extension {
+class StockKeepingShoppingCartExtension extends Extension
+{
     
-    public function onBeforeAdd($cart_item) {
+    public function onBeforeAdd($cart_item)
+    {
         // Check that item is not out of stock or has enough stock
-        if($cart_item->Quantity) {
+        if ($cart_item->Quantity) {
             $item = $cart_item->FindStockItem();
             $stock = ($item->StockLevel) ? $item->StockLevel : 0;
             
-            if($stock < $cart_item->Quantity && !CommerceStockKeeping::config()->allow_adding) {
+            if ($stock < $cart_item->Quantity && !CommerceStockKeeping::config()->allow_adding) {
                 throw new ValidationException(_t(
                     "StockKeeping.NotEnoughStock",
                     "There are not enough '{title}' in stock",
@@ -27,14 +29,15 @@ class StockKeepingShoppingCartExtension extends Extension {
     }
     
     
-    public function onBeforeUpdate($cart_item) {
+    public function onBeforeUpdate($cart_item)
+    {
         
         // Check that item is not out of stock or has enough stock
-        if($cart_item->Quantity) {
+        if ($cart_item->Quantity) {
             $item = $cart_item->FindStockItem();
             $stock = ($item->StockLevel) ? $item->StockLevel : 0;
             
-            if($stock < $cart_item->Quantity && !CommerceStockKeeping::config()->allow_adding) {
+            if ($stock < $cart_item->Quantity && !CommerceStockKeeping::config()->allow_adding) {
                 // Set quantity to the level we have in stock
                 $cart_item->Quantity = $stock;
                 
@@ -47,5 +50,4 @@ class StockKeepingShoppingCartExtension extends Extension {
             }
         }
     }
-    
-} 
+}
