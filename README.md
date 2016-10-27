@@ -1,3 +1,5 @@
+# NOTICE: This module is depreciated, merged into the core commerce module and will shortly be removed from Packagist
+
 Silverstripe Commerce Stock Keeping
 ===================================
 
