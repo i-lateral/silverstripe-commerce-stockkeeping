@@ -3,7 +3,8 @@
 /**
  * Core config class for this module
  */
-class CommerceStockKeeping extends ViewableData {
+class CommerceStockKeeping extends ViewableData
+{
     
     /**
      * The status which an order must be given in order for it to
@@ -12,7 +13,7 @@ class CommerceStockKeeping extends ViewableData {
      * @var string
      * @config
      */
-    private static $completion_status = "paid"; 
+    private static $completion_status = "paid";
     
     /**
      * Should we track stock levels into the negative, if this is
@@ -30,5 +31,4 @@ class CommerceStockKeeping extends ViewableData {
      * @config
      */
     private static $allow_adding = false;
-    
 }
